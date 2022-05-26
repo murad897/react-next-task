@@ -110,7 +110,7 @@ const Popup = () => {
             className="close-modal-button"
             variant="contained"
             onClick={() => {
-              handleProduct(), handleOpen();
+              handleOpen();
             }}
           >
             Close modal

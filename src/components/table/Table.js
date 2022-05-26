@@ -1,8 +1,7 @@
 import React from "react";
-import { useContext } from "react";
 
 const Table = () => {
-  return <div>Table</div>;
+  return <div className="text-font24">Table</div>;
 };
 
 export default Table;

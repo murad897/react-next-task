@@ -119,7 +119,7 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: space-between;
   align-items: center;
   gap: 27px;
-  font-size: 19px;
+  font-size: 17px;
   color: #339dff;
   padding-top: 10px;
 }
@@ -135,6 +135,10 @@ input[type="search"]::-webkit-search-results-decoration {
 .navigation-container nav {
   display: flex;
   gap: 20px;
+}
+
+.css-1wnsr1i {
+  z-index: 42342;
 }
 
 .navigation-container a:hover {
@@ -182,4 +186,18 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .popup-model button {
   padding: 10px;
+}
+
+.table-container {
+  margin: 0 5%;
+  margin-top: 70px;
+}
+
+.mdb-datatable {
+  margin: 0 5%;
+  margin-top: 30px;
+}
+
+.mdb-datatable .row:nth-of-type(2) {
+  display: none;
 }
