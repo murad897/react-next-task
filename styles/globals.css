@@ -1,0 +1,185 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a /* &c... */ {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+input,
+button span {
+  font-family: "Open Sans", sans-serif !important;
+}
+
+.home-page-container {
+  max-width: 1700px;
+  margin: 0 auto;
+}
+
+.header-container {
+  border-bottom: 1px solid #e9eaf0;
+}
+
+.header-container-inner {
+  margin: 0 5%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header-logo-image {
+  cursor: pointer;
+}
+
+.header-container-left-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+}
+
+.header-search-input form {
+  color: #555;
+  display: flex;
+  padding: 2px;
+  border: 1px solid currentColor;
+  border-radius: 30px;
+}
+
+.header-search-input input[type="search"] {
+  border: none;
+  background: transparent;
+  margin: 0;
+  padding: 7px 8px;
+  font-size: 14px;
+  color: inherit;
+  border: 1px solid transparent;
+  border-radius: inherit;
+}
+
+.header-search-input input[type="search"]::placeholder {
+  color: #bbb;
+}
+
+.header-search-input button[type="submit"] {
+  text-indent: -999px;
+  overflow: hidden;
+  width: 40px;
+  padding: 0;
+  margin: 0;
+  border: 1px solid transparent;
+  border-radius: inherit;
+  background: transparent
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' class='bi bi-search' viewBox='0 0 16 16'%3E%3Cpath d='M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z'%3E%3C/path%3E%3C/svg%3E")
+    no-repeat center;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.header-search-input button[type="submit"]:hover {
+  opacity: 1;
+}
+
+input:focus {
+  outline: none;
+}
+
+/* clears the ‘X’ from Internet Explorer */
+input[type="search"]::-ms-clear {
+  display: none;
+  width: 0;
+  height: 0;
+}
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+/* clears the ‘X’ from Chrome */
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+.navigation-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 27px;
+  font-size: 19px;
+  color: #339dff;
+  padding-top: 10px;
+}
+
+.navigation-container a {
+  cursor: pointer;
+  padding-bottom: 10px;
+  border-bottom: 3px solid white;
+  padding-left: 5px;
+  padding-right: 5px;
+}
+
+.navigation-container nav {
+  display: flex;
+  gap: 20px;
+}
+
+.navigation-container a:hover {
+  border-bottom: 3px solid #339dff;
+}
+
+.header-container-right-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.active {
+  display: block;
+}
+
+.not-active {
+  display: none;
+}
+
+.popup-model {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.popup-model label {
+  margin-bottom: 4px;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.popup-model input {
+  padding: 10px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.popup-model-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-model button {
+  padding: 10px;
+}
