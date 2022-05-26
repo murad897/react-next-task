@@ -139,6 +139,8 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .css-1wnsr1i {
   z-index: 42342;
+  width: auto;
+  padding: 0;
 }
 
 .navigation-container a:hover {
@@ -165,6 +167,7 @@ input[type="search"]::-webkit-search-results-decoration {
   justify-content: center;
   flex-direction: column;
   gap: 20px;
+  padding: 29px;
 }
 
 .popup-model label {
@@ -182,6 +185,8 @@ input[type="search"]::-webkit-search-results-decoration {
 .popup-model-item {
   display: flex;
   flex-direction: column;
+  min-height: 70px;
+  min-width: 340px;
 }
 
 .popup-model button {
@@ -200,4 +205,11 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .mdb-datatable .row:nth-of-type(2) {
   display: none;
+}
+
+.input-style {
+  min-height: 50px;
+  display: grid;
+  align-items: center;
+  min-width: 350px;
 }

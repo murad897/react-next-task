@@ -49,53 +49,63 @@ const Popup = () => {
         <form className="popup-model" onSubmit={PopupSubmitEvent}>
           <div className="popup-model-item">
             <label htmlFor="image">Image</label>
-            <input
-              value={formData.image}
-              type="text"
-              name="image"
-              placeholder="HTTP LINK...."
-              onChange={handleChange}
-            />
+            <div className="input-style">
+              <input
+                value={formData.image}
+                type="text"
+                name="image"
+                placeholder="HTTP LINK...."
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="popup-model-item">
             <label htmlFor="name">Name</label>
-            <input
-              value={formData.name}
-              type="text"
-              name="name"
-              placeholder="Name...."
-              onChange={handleChange}
-            />
+            <div className="input-style">
+              <input
+                value={formData.name}
+                type="text"
+                name="name"
+                placeholder="Name...."
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="popup-model-item">
             <label htmlFor="mpns">MPNS</label>
-            <input
-              value={formData.mpns}
-              type="text"
-              name="mpns"
-              placeholder="Mpns...."
-              onChange={handleChange}
-            />
+            <div className="input-style">
+              <input
+                value={formData.mpns}
+                type="text"
+                name="mpns"
+                placeholder="Mpns...."
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="popup-model-item">
             <label htmlFor="product">Product</label>
-            <input
-              value={formData.product}
-              type="text"
-              name="product"
-              placeholder="product...."
-              onChange={handleChange}
-            />
+            <div className="input-style">
+              <input
+                value={formData.product}
+                type="text"
+                name="product"
+                placeholder="product...."
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <div className="popup-model-item">
             <label htmlFor="manifactuler">Manifactuler</label>
-            <input
-              value={formData.manifactuler}
-              type="text"
-              name="manifactuler"
-              placeholder="Manifactuler...."
-              onChange={handleChange}
-            />
+            <div className="input-style">
+              <input
+                value={formData.manifactuler}
+                type="text"
+                name="manifactuler"
+                placeholder="Manifactuler...."
+                onChange={handleChange}
+              />
+            </div>
           </div>
           <Button
             className="submit-button"
