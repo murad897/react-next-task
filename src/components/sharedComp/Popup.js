@@ -10,7 +10,10 @@ const Popup = () => {
   const { setProducts } = useContext(formInfo);
   const { setOpen } = useContext(PopupContext);
   const handleOpen = () => setOpen(false);
-  const handleProduct = () => setProducts((prevState) => [...prevState, formData]);
+  const handleProduct = () => {
+    setProducts((prevState) => [...prevState, formData]);
+  };
+
   const [formData, setFormData] = useState({
     image: "",
     name: "",
@@ -107,6 +110,7 @@ const Popup = () => {
               />
             </div>
           </div>
+
           <Button
             className="submit-button"
             variant="contained"

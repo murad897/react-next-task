@@ -9,3 +9,8 @@ export const formInfo = createContext({
   products: [],
   setProducts: (product) => {},
 });
+
+export const secformInfo = createContext({
+  secIsopen: false,
+  secsetOpen: (value) => {},
+});

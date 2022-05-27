@@ -4,11 +4,16 @@ import Button from "@mui/material/Button";
 import Navigation from "./Navigation";
 import { PopupContext } from "../../context/context";
 import { useContext } from "react";
+import { formInfo } from "../../context/context";
 
 const Header = () => {
   const [inputValue, setInputValue] = useState("");
   const { setOpen } = useContext(PopupContext);
+  const { setProducts } = useContext(formInfo);
   const handleOpen = () => setOpen(true);
+  const handleDelete = () => {
+    setProducts((prevState) => []);
+  };
   const formSubmit = (e) => {
     e.preventDefault();
     setInputValue("");
@@ -41,6 +46,9 @@ const Header = () => {
         {/* right section */}
         <div className="header-container-right-section">
           <div className="header-create-button">
+            <Button variant="contained" color="error" onClick={handleDelete}>
+              Delete all
+            </Button>
             <Button variant="contained" color="success" onClick={handleOpen}>
               Create
             </Button>
