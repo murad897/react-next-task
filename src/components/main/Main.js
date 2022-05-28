@@ -8,9 +8,13 @@ import TableComp from "../table/Table";
 import "@fortawesome/fontawesome-free/css/all.min.css";
 import "bootstrap-css-only/css/bootstrap.min.css";
 import "mdbreact/dist/css/mdb.css";
+import { secformInfo } from "../../context/context";
+import SecPopup from "../sharedComp/SecPopup";
 
 const Main = () => {
   const [open, setOpen] = useState(false);
+  const [isSecOpen, setSecOpen] = useState(false);
+  const [indexVal, setIndexVal] = useState(null);
   const [products, setProducts] = useState([
     {
       image:
@@ -35,9 +39,12 @@ const Main = () => {
     <div className="home-page-container">
       <PopupContext.Provider value={{ open, setOpen }}>
         <formInfo.Provider value={{ products, setProducts }}>
-          <Header />
-          {open ? <Popup /> : ""}
-          <TableComp />
+          <secformInfo.Provider value={{ indexVal, setIndexVal, isSecOpen, setSecOpen }}>
+            <Header />
+            {open ? <Popup /> : ""}
+            <TableComp />
+            {isSecOpen ? <SecPopup /> : ""}
+          </secformInfo.Provider>
         </formInfo.Provider>
       </PopupContext.Provider>
     </div>

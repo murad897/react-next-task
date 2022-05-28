@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Table from "@mui/material/Table";
 import TableBody from "@mui/material/TableBody";
 import TableCell from "@mui/material/TableCell";
@@ -8,12 +8,21 @@ import Paper from "@mui/material/Paper";
 import { useContext } from "react";
 import { formInfo } from "../../context/context";
 import Checkbox from "@mui/material/Checkbox";
+import { secformInfo } from "../../context/context";
 
 const TableComp = () => {
-  const HandleDubbleClick = () => {
-    console.log("fdsfs");
-  };
+  const { indexVal } = useContext(secformInfo);
+  const { setIndexVal } = useContext(secformInfo);
+  const { isSecOpen } = useContext(secformInfo);
+  const { setSecOpen } = useContext(secformInfo);
 
+  const HandleDubbleClick = (e, index) => {
+    setIndexVal(index);
+    setSecOpen(!isSecOpen);
+    console.log(e);
+    console.log(index);
+  };
+  console.log(indexVal);
   const { products } = useContext(formInfo);
   return (
     <div>
@@ -33,7 +42,7 @@ const TableComp = () => {
               <TableRow
                 className="data-row"
                 key={index}
-                onDoubleClick={HandleDubbleClick}
+                onDoubleClick={(e) => HandleDubbleClick(e, index)}
               >
                 <TableCell component="th" scope="row">
                   <Checkbox checked />

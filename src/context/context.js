@@ -11,6 +11,8 @@ export const formInfo = createContext({
 });
 
 export const secformInfo = createContext({
-  secIsopen: false,
-  secsetOpen: (value) => {},
+  isSecOpen: false,
+  setSecOpen: (value) => {},
+  indexVal: null,
+  setIndex: (index) => {},
 });
